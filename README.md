@@ -1,1 +1,1 @@
-# GoogleCloneApp
+# DuolingoCloneApp
