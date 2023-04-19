@@ -2,14 +2,14 @@ version: '3'
 
 services:
 
-  backend:  
-    container_name: backend
-    image: backend
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+  postgresqldb:
+    image: postgres
     ports:
-      - "8080:8080"
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=netflix
     networks:
       - postgres-compose-network
   
